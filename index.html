@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Login and Sign Up</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <section class="hero">
+            <div class="form-container">
+                <div id="login" class="form-box active">
+                    <h1>Login</h1>
+                    <form id="loginForm">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="loginEmailField" name="email" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="loginPasswordField" name="password" required>
+                        <button type="button" onclick="login()">Login</button>
+                    </form>
+                    <p class="toggle-form">Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                </div>
+                <div id="signup" class="form-box">
+                    <h1>Sign Up</h1>
+                    <form id="signupForm">
+                        <label for="new-username">Name:</label>
+                        <input type="text" id="signupNameField" name="new-username" required>
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signupEmailField" name="email" required>
+                        <label for="signup-phone">Phone:</label>
+                        <input type="tel" id="signupPhoneField" class="phonenum" name="phone" required>
+                        <label for="new-password">Password:</label>
+                        <input type="password" id="signupPasswordField" name="new-password" required>
+                        <div class="g-recaptcha" data-sitekey="6Lf1YusqAAAAAIYon5ulK-l3526z2oxDufXxmvaw"></div>
+                        <button type="button" id="signupBtn" onclick="signup()">Sign Up</button>
+                    </form>
+                    <p class="toggle-form">Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                </div>
+                <div id="successMessage" style="display:none;">
+                    <h2>Success!</h2>
+                    <p>Your account has been created successfully.</p>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
